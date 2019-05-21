@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaNotaActivity">
+    tools:context=".activity.ListaNotaActivity">
 
-    <ListView
-        android:id="@+id/listView"
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/lista_notas_insere_nota"
+        app:layout_constraintBottom_toTopOf="@id/inserir_nota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         tools:listitem="@layout/item_nota" />
 
     <View
@@ -21,12 +24,12 @@
         android:layout_width="0dp"
         android:layout_height="5dp"
         android:background="@drawable/fundo_gradiente_insere_nota"
-        app:layout_constraintBottom_toTopOf="@id/lista_notas_insere_nota"
+        app:layout_constraintBottom_toTopOf="@id/inserir_nota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/lista_notas_insere_nota"
+        android:id="@+id/inserir_nota"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"

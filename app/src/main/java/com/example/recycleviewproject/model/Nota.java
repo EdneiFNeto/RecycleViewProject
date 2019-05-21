@@ -1,6 +1,8 @@
 package com.example.recycleviewproject.model;
 
-public class Nota {
+import java.io.Serializable;
+
+public class Nota implements Serializable {
 
     private final String titulo;
     private final String descricao;
@@ -18,4 +20,8 @@ public class Nota {
         return descricao;
     }
 
+    @Override
+    public String toString() {
+        return this.getTitulo()+"\n"+this.getDescricao();
+    }
 }
